@@ -10,7 +10,8 @@ class DateConverter:
     ISO_DATEFORMAT = "%Y-%m-%dT%H:%M:%S"
 
     @classmethod
-    def to_end_min(
+    def to_end_min( 
+        # 시분초 형태의 시간 정보로 이루어진 시물레이션 기간 정보를 업비트에서 사용되는 종료 시점과 틱의 개수  Count로 변환해주는 함수
         cls,
         from_dash_to=None,
         start_dt=None,

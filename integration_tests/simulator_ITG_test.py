@@ -11,11 +11,11 @@ class SimulatorIntegrationTests(unittest.TestCase):
     def tearDown(self):
         Config.candle_interval = self.interval
 
-    @patch("builtins.print")
-    def test_ITG_run_single_simulation(self, mock_print):
+    @patch("builtins.print") # print 함수를 mock 으로 대체
+    def test_ITG_run_single_simulation(self, mock_print): # 한 번의 실행이 설정부터 처리되는 run_single 메서드 검증 
         interval = 0.01
         from_dash_to = "200430.055000-200430.073000"
-        simulator = Simulator(
+        simulator = Simulator(  # 예산과 시뮬레이션 턴의 간격, 사용될 전략, 시뮬레시연 기간을 simulator 생성자를 통해 생성함 
             budget=1000000,
             interval=interval,
             strategy="BNH",
@@ -26,11 +26,14 @@ class SimulatorIntegrationTests(unittest.TestCase):
         simulator.run_single()
         self.assertEqual(mock_print.call_args[0][0], "Good Bye~")
 
-    @patch("builtins.input")
-    @patch("builtins.print")
+
+
+    # 사용자의 입력을 기반으로 Simlutor가 동작하는 동작 검증 
+    @patch("builtins.input") 
+    @patch("builtins.print") 
     def test_ITG_run_simulation(self, mock_print, mock_input):
         simulator = Simulator()
-        mock_input.side_effect = [
+        mock_input.side_effect = [ # Mock 객체를 통해 사용자가 직접 입력한 것 처럼 만들기 
             "i",  # 초기화
             "200430.055000",  # 시뮬레이션 기간 시작점
             "200430.073000",  # 시뮬레이션 기간 종료점

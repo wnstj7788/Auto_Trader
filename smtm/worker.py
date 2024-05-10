@@ -1,6 +1,6 @@
 """입력받은 task를 별도의 thread에서 차례대로 수행하는 일꾼 역할의 Worker 클래스"""
 import queue
-import threading
+import threading #thread를 위한 라이브러리 
 import traceback
 from .log_manager import LogManager
 
@@ -13,8 +13,9 @@ class Worker:
     task는 dictionary이며 runnable에는 실행 가능한 객체를 담고 있어야 하며, runnable의 인자로 task를 넘겨준다.
     """
 
+    # self -> 현재 객체를 가리키는데 사용되는 변수
     def __init__(self, name):
-        self.task_queue = queue.Queue()
+        self.task_queue = queue.Queue() 
         self.thread = None
         self.name = name
         self.logger = LogManager.get_logger(name)
