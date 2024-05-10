@@ -38,19 +38,6 @@
 ## Architecture
 확장성과 유지보수성을 갖춘 Layered Architecture
 
-더 자세한 내용은 👉[smtm wiki](https://github.com/msaltnet/smtm/wiki/2.-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)
 
 ![smtm component](./doc/smtm_component.png)
 
-## CodeLabs for smtm
-- [시뮬레이션 CodeLab](https://smtm.msalt.net/codelab/smtm-simulation/)
-- [모의 투자 CodeLab](https://smtm.msalt.net/codelab/smtm-demo/)
-- [암호화폐 자동매매 시스템 만들기 with 파이썬 - 보충 수업](https://smtm.msalt.net/codelab/smtm-after-school/)
-
-## 관련 도서
-
-"암호화폐 자동매매 시스템 만들기 with 파이썬" 도서 - [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788997924967) [예스24](http://www.yes24.com/Product/Goods/107635612) [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=289526248)
-
-[![smtm-book](https://user-images.githubusercontent.com/9311990/157685437-dcedd2c0-9f0c-400c-a3d4-017354279b60.png)](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788997924967)
-
-**더 많은 정보는 👉[smtm wiki](https://github.com/msaltnet/smtm/wiki)**
